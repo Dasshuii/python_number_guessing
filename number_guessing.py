@@ -2,20 +2,17 @@ import random
 
 def main():
     prompt = 'Guess the number between 1 and 100: '
-    random_number = random.randint(1, 100)
+    number_to_guess = random.randint(1, 100)
     guessed = False
     while (not guessed):
         number = get_user_input(prompt)
-        if number == random_number:
+        if number == number_to_guess:
             print('Congratulations! You guessed the number!')
             guessed = True
-        elif number > random_number:
+        elif number > number_to_guess:
             print('Too high!')
         else:
             print('Too low!')
-    
-
-
 
 def get_user_input(prompt) -> int:
     try:
